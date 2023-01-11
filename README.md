@@ -5,7 +5,7 @@ Goal: In this pre-test, you will implement a feature extractor that detects sent
 You will then write a reflection on how well you think this feature extractor performed on the data. Please write your reflection in this README document.
 
 ## What method(s) did you choose?
-Describe your sentiment analysis methods below.
+Describe your sentiment analysis method(s) below.
 
 [YOUR ANSWER HERE]
 
