@@ -53,6 +53,8 @@ d. Why did you select this metric? Discuss briefly.
 
 e. Load the DynaSent benchmark dataset (https://github.com/cgpotts/dynasent). Choose the Round 2 test dataset ("Sentences crowdsourced using Dynabench"). Evaluate your model on the test dataset, using the metric(s) you selected in part (c). You may present your results in a list or table (whichever is more convenient).
 
+*Note*: The code for how you run the evaluation will not be directly evaluated as part of this take-home test. Therefore, you have several options for evaluating your feature extractor: you may choose to modify test_featurize.py, or make a copy and define your own function. You could also run the evaluation in a Jupyter Notebook if you choose. 
+
 [YOUR RESULTS HERE]
 
 f. How well did you do? Reflect on the performance of your model(s). If you implemented more than one model, compare how well they performed. How do you think the performance could be improved?
