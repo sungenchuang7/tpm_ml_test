@@ -55,8 +55,12 @@ e. Load the DynaSent benchmark dataset (https://github.com/cgpotts/dynasent). Ch
 
 [YOUR RESULTS HERE]
 
+f. How well did you do? Reflect on the performance of your model(s). If you implemented more than one model, compare how well they performed. How do you think the performance could be improved?
+
+[YOUR ANSWER]
+
 
 ## Overall reflection
-Finally, provide an overall reflection of your experience. How did you approach this task? How did you approach training, testing, and validation of your model? What challenge(s) did you encounter? If you had more time, what are some ways that you would want to improve your feature extractor?
+Finally, provide an overall reflection of your experience. How did you approach this task? How did you approach training, testing, and validation of your model? What challenge(s) did you encounter? If you had more time, what are additional extensions, improvements, or tests that you would want to implement?
 
 [YOUR ANSWER]
