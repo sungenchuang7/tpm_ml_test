@@ -41,7 +41,7 @@ b.	Give a few examples in which the feature extractor does not (seem to) work as
 
 [YOUR ANSWER]
 
-### Next, you will evaluate your feature extractor on an an external benchmark dataset. If you implemented multiple methods, please do this for each method, so that you can compare/contrast their performance.
+### Next, you will evaluate your feature extractor on an external benchmark dataset. If you implemented multiple methods, please do this for each method, so that you can compare/contrast their performance.
 
 c. Select an evaluation metric (e.g., F1, AUC, Accuracy, Precision, Recall). You may use a combination of multiple metrics.
 
