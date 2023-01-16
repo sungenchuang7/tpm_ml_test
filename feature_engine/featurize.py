@@ -34,7 +34,8 @@ def create_chat_level_feature(df, feature_name, function_name):
 if __name__ == "__main__":
 
 	# import the data from the data file
-	INPUT_FILE_PATH = './data/raw_data/jury_conversations_with_outcome_var.csv'
+	# INPUT_FILE_PATH = './data/raw_data/jury_conversations_with_outcome_var.csv'
+	INPUT_FILE_PATH = './data/raw_data/test-csv-file.csv'
 	OUTPUT_FILE_PATH_CHAT_LEVEL = './output/jury_output_chat_level.csv'
 
 	conversation_data = pd.read_csv(INPUT_FILE_PATH)
@@ -58,7 +59,8 @@ if __name__ == "__main__":
 
 
 	### CONVERSATION-LEVEL FEATURES --------------------------------------------------------------
-	OUTPUT_FILE_PATH_CONVERSATION_LEVEL = './output/jury_output_conversation_level.csv'
+	# OUTPUT_FILE_PATH_CONVERSATION_LEVEL = './output/jury_output_conversation_level.csv'
+	OUTPUT_FILE_PATH_CONVERSATION_LEVEL = './output/test-output.csv'
 
 	'''
 	conversation-level features take place at the level of the entire conversation; 
