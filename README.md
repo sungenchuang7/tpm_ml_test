@@ -27,7 +27,6 @@ Next, we would like you to consider how you would evaluate your method. How do y
 
 2d. (OPTIONAL) Implement your proposed steps in 2b, using the DynaSent benchmark dataset (https://github.com/cgpotts/dynasent). Choose the Round 2 test dataset (“Sentences crowdsourced using Dynabench”). Evaluate the model using benchmarks you have proposed, and briefly comment on the quality of your performance.
 
-> [YOUR ANSWER]
 
 ## 3. Overall reflection
 3a. How much time did it take you to complete this task? (Please be honest; we are looking for feedback to make sure the task is scoped appropriately, as this is one of the first times we’re using this task.)
