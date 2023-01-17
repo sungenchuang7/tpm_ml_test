@@ -11,6 +11,7 @@ from scipy.special import softmax
 
 
 # TODO - DEFINE YOUR FEATURE EXTRACTOR HERE
+# source: https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment-latest
 def preprocess(text):
     new_text = []
     for t in text.split(" "):
@@ -20,13 +21,12 @@ def preprocess(text):
     return " ".join(new_text)
 
 def get_sentiment(text):
-    MODEL = f"cardiffnlp/twitter-roberta-base-sentiment-latest"
+    MODEL = "cardiffnlp/twitter-roberta-base-sentiment-latest"
     tokenizer = AutoTokenizer.from_pretrained(MODEL)
     config = AutoConfig.from_pretrained(MODEL)
     # PT
     model = AutoModelForSequenceClassification.from_pretrained(MODEL)
     #model.save_pretrained(MODEL)
-    text = "he's a human"
     text = preprocess(text)
     encoded_input = tokenizer(text, return_tensors='pt')
     output = model(**encoded_input)
@@ -42,14 +42,5 @@ def get_sentiment(text):
 
     return dictionary
 
-    # tokenizer = AutoTokenizer.from_pretrained("ProsusAI/finbert")
-    # model = AutoModelForSequenceClassification.from_pretrained("ProsusAI/finbert")
-
-    # inputs = tokenizer(text, return_tensors="pt")
-    # with torch.no_grad():
-    #     logits = model(**inputs).logits
-    # scores = {k: v for k, v in zip(model.config.id2label.values(), scipy.special.softmax(logits.numpy().squeeze()))}
-        
-    # return scores
     # sample output format
     # return({'positive': 0.0, 'negative': 0.0, 'neutral': 0.0})

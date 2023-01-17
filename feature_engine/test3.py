@@ -3,6 +3,7 @@ from transformers import TFAutoModelForSequenceClassification
 from transformers import AutoTokenizer, AutoConfig
 import numpy as np
 from scipy.special import softmax
+
 # Preprocess text (username and link placeholders)
 def preprocess(text):
     new_text = []
@@ -11,13 +12,16 @@ def preprocess(text):
         t = 'http' if t.startswith('http') else t
         new_text.append(t)
     return " ".join(new_text)
-MODEL = f"cardiffnlp/twitter-roberta-base-sentiment-latest"
+    
+MODEL = "cardiffnlp/twitter-roberta-base-sentiment-latest"
 tokenizer = AutoTokenizer.from_pretrained(MODEL)
 config = AutoConfig.from_pretrained(MODEL)
 # PT
 model = AutoModelForSequenceClassification.from_pretrained(MODEL)
 #model.save_pretrained(MODEL)
-text = "he's a human"
+text = "hi"
+text = text.replace("an asshole", "a bad person")
+text = text.replace("asshole", "bad person")
 text = preprocess(text)
 encoded_input = tokenizer(text, return_tensors='pt')
 output = model(**encoded_input)

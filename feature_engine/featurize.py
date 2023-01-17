@@ -35,11 +35,14 @@ if __name__ == "__main__":
 
 	# import the data from the data file
 	# INPUT_FILE_PATH = './data/raw_data/jury_conversations_with_outcome_var.csv'
-	INPUT_FILE_PATH = './data/raw_data/test-csv-file.csv'
+	INPUT_FILE_PATH = './data/raw_data/sample.csv'
 	OUTPUT_FILE_PATH_CHAT_LEVEL = './output/jury_output_chat_level.csv'
 
 	conversation_data = pd.read_csv(INPUT_FILE_PATH)
 	output_data_chats = conversation_data
+
+	# conversation_data_sample = pd.read_csv(INPUT_FILE_PATH_SAMPLE)
+	# output_data_chats_sample = conversation_data_sample
 
 
 	### CHAT-LEVEL FEATURES --------------------------------------------------------------
@@ -57,9 +60,8 @@ if __name__ == "__main__":
 	output_data_chats.to_csv(OUTPUT_FILE_PATH_CHAT_LEVEL)
 
 
-
 	### CONVERSATION-LEVEL FEATURES --------------------------------------------------------------
-	# OUTPUT_FILE_PATH_CONVERSATION_LEVEL = './output/jury_output_conversation_level.csv'
+	OUTPUT_FILE_PATH_CONVERSATION_LEVEL = './output/jury_output_conversation_level.csv'
 	OUTPUT_FILE_PATH_CONVERSATION_LEVEL = './output/test-output.csv'
 
 	'''
