@@ -40,3 +40,7 @@ Next, we would like you to consider how you would evaluate your method. How do y
 
 > - Also, if I had more time, I would try to think of a less biased way of measuring the accurary of output. Human interpretation of the raw data seems to involve moral judgement (e.g. judging if the person is really an asshole instead of really objectively judging if the sentence sounds negative or positive) thus creating biases. In other words, the test data created by humans might also be biased. If I had more time, I would try to look into how the model I used was trained and also some papers to design better algorithm for testing data. 
 
+
+## 4. Added files
+> - sample.csv: This is the sample I took from the raw dataset. 
+> - test-data.xlsx: This keeps track of 3 human's interpretation of the utterances and cross-checking with the model's output for calculating accuracy
