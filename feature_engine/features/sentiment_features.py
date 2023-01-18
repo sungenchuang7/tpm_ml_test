@@ -9,6 +9,10 @@ from transformers import AutoTokenizer, AutoConfig
 import numpy as np
 from scipy.special import softmax
 
+from transformers import logging
+
+logging.set_verbosity_warning()
+
 
 # TODO - DEFINE YOUR FEATURE EXTRACTOR HERE
 # source: https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment-latest
@@ -20,7 +24,9 @@ def preprocess(text):
         new_text.append(t)
     return " ".join(new_text)
 
+
 def get_sentiment(text):
+    
     MODEL = "cardiffnlp/twitter-roberta-base-sentiment-latest"
     tokenizer = AutoTokenizer.from_pretrained(MODEL)
     config = AutoConfig.from_pretrained(MODEL)
@@ -28,6 +34,11 @@ def get_sentiment(text):
     model = AutoModelForSequenceClassification.from_pretrained(MODEL)
     #model.save_pretrained(MODEL)
     text = preprocess(text)
+
+    ###
+    print("current text: ",end="")
+    print(text)
+    ###
     encoded_input = tokenizer(text, return_tensors='pt')
     output = model(**encoded_input)
     scores = output[0][0].detach().numpy()
@@ -40,6 +51,10 @@ def get_sentiment(text):
     dictionary[keys[1]] = scores[0]
     dictionary[keys[2]] = scores[1]
 
+    ###
+    print(dictionary)
+    ###
+    
     return dictionary
 
     # sample output format

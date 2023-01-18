@@ -34,15 +34,12 @@ def create_chat_level_feature(df, feature_name, function_name):
 if __name__ == "__main__":
 
 	# import the data from the data file
-	# INPUT_FILE_PATH = './data/raw_data/jury_conversations_with_outcome_var.csv'
-	INPUT_FILE_PATH = './data/raw_data/sample.csv'
+	INPUT_FILE_PATH = './data/raw_data/jury_conversations_with_outcome_var.csv'
 	OUTPUT_FILE_PATH_CHAT_LEVEL = './output/jury_output_chat_level.csv'
 
 	conversation_data = pd.read_csv(INPUT_FILE_PATH)
 	output_data_chats = conversation_data
 
-	# conversation_data_sample = pd.read_csv(INPUT_FILE_PATH_SAMPLE)
-	# output_data_chats_sample = conversation_data_sample
 
 
 	### CHAT-LEVEL FEATURES --------------------------------------------------------------
@@ -50,18 +47,20 @@ if __name__ == "__main__":
 	chat-level features take place on the single-utterance level. Each person will make
 	many utterances throughout a conversation.
 	'''
+	
 	output_data_chats = create_chat_level_feature(output_data_chats, "num_words", count_words)
 	output_data_chats = create_chat_level_feature(output_data_chats, "num_chars", count_characters)
-
-	# TPM TAKE-HOME: YOUR FEATURE EXTRACTOR GOES HERE.
-	output_data_chats = create_chat_level_feature(output_data_chats, "sentiment", get_sentiment)
 	
+	# TPM TAKE-HOME: YOUR FEATURE EXTRACTOR GOES HERE.
+
+	output_data_chats = create_chat_level_feature(output_data_chats, "sentiment", get_sentiment)
+
 	# generate output file
 	output_data_chats.to_csv(OUTPUT_FILE_PATH_CHAT_LEVEL)
 
 
 	### CONVERSATION-LEVEL FEATURES --------------------------------------------------------------
-	OUTPUT_FILE_PATH_CONVERSATION_LEVEL = './output/jury_output_conversation_level.csv'
+	OUTPUT_FILE_PATH_CONVERSATION_LEVEL = './output/sample.csv'
 	OUTPUT_FILE_PATH_CONVERSATION_LEVEL = './output/test-output.csv'
 
 	'''
